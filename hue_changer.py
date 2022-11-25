@@ -36,7 +36,7 @@ def colorChanger(sfilename,tfilename):
                             ho[row+i][col+j] = ht[row][col]
                             so[row+i][col+j] = st[row][col]
                    
-    vo = np.clip(vo + 40, 0, 255)
+    vo = np.clip(vo + 10, 0, 255)
     hsv = cv2.merge([ho, so, vo])
     bgr = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
 
