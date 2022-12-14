@@ -52,7 +52,7 @@ def changeColor(sfilename,tfilename):
     cv2.imwrite('static/images/foreground.jpg',bgr)
     fimage = cv2.imread('static/images/foreground.jpg')
     fimage = cv2.resize(fimage,(owidth,oheight))
-    final_image=bimage + fimage
+    final_image=cv2.bitwise_or(bimage ,fimage)
     cv2.imwrite('static/images/output.jpg',final_image)
     result='output.jpg'
     return(result)
